@@ -39,7 +39,7 @@
 .btn {
     width: 183.7px;
     height: 34.34px;
-    background-color: #29CC6A;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white-text);
     border: none;
 }
