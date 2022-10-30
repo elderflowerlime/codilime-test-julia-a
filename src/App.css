@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --primary-color: #29CC6A
-  --white-text: #fff
+  --primary-color: #29CC6A;
+  --secondary-color: #2B2D26;
+  --white: #fff;
+  --gray: #787A7C;
 }
 
 * {
@@ -16,4 +18,15 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+}
+
+.btn-small {
+  width: 183.7px;
+  height: 34.34px;
 }

@@ -33,7 +33,7 @@ function Navbar() {
         </div>
         <div className="navbar-contact-button">
             <Link to='/' className="navbar-links"> 
-                <button className='btn'>Contact Us</button>
+                <button className='btn-primary btn-small'> Contact Us </button>
             </Link>
         </div>
     </div>
