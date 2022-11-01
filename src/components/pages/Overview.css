@@ -1,27 +1,25 @@
 .overview-body {
-    width: 1400px;
-    margin: 0px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    margin: 30px 0px;
+    position: relative;
 }
 
-.logo > h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 40px;
-    letter-spacing: -0.02px;
-}
+/* SECTION ONE */
 
 .introduction {
-    display:flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .introduction-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
-    width: 500px;
+    width: 450px;
     height: 400px;
 }
 
@@ -35,16 +33,62 @@
     color: var(--primary-color);
 }
 
-.introduction-text > p {
+.introduction-text-small {
+    width: 360px;
+}
+
+.introduction-text-small > p {
     color: var(--secondary-color);
     line-height: 24px;
     
 }
 
 img {
-    width: 758px;
-    height: 506px;
+    width: auto;
+    height: auto;
 }
 
 
-  
+/* SECTION 2 */
+
+.qna-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.qna-title > h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.qna-container {
+    padding-top: 30px;
+    width: 1200px;
+    height: 150px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.qna-container > p {
+    padding-top: 30px;
+}
+
+.qna-wrap {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.qna-wrap-text > h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.qna-wrap > span {
+    padding-top: 15px;
+}

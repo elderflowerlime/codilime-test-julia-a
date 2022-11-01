@@ -6,6 +6,9 @@ function Navbar() {
   return (
     <>
     <div className="navbar">
+        <div className='logo'>
+            <h1> Future one </h1>
+        </div>
         <div className="navbar-container">
             <ul className="navbar-list">
                 <li className="navbar-item"> 
@@ -32,9 +35,7 @@ function Navbar() {
             </ul>
         </div>
         <div className="navbar-contact-button">
-            <Link to='/' className="navbar-links"> 
-                <button className='btn-primary btn-small'> Contact Us </button>
-            </Link>
+        <button className='btn-primary btn-small'> Contact Us </button>
         </div>
     </div>
     </>
