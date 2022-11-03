@@ -38,3 +38,9 @@ html, body, h1, h2 {
   width: 218px;
   height: 45.79px;
 }
+
+.btn-outline {
+  font-weight: 400;
+  padding: 10px 30px;
+  border: 2px solid var(--white);
+}

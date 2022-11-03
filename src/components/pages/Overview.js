@@ -4,19 +4,25 @@ import Picture from '../resources/Picture.png'
 import { Data }  from '../Data.js'
 import Plus from '../resources/Plus.png'
 import Minus from '../resources/Minus.png'
+import inVision from '../resources/inVision.png'
+import quote1 from '../resources/quote1.png'
+import quote2 from '../resources/quote2.png'
+import blockone from '../resources/blockone.png'
+import blocktwo from '../resources/blocktwo.png'
+import androidGrey from '../resources/androidGrey.png'
+import blockfour from '../resources/blockfour.png'
 
 
 function Overview() {
 
-        const [clicked,setClicked] = useState(false)
+        const [clicked, setClicked] = useState(false)
 
-        const toggle = index => {
-            if(clicked === index) {
+        const toggle = (i) => {
+            if(clicked === i) {
                 //if clicked question in already open then close it
                 return setClicked(null)
             }
-
-            setClicked(index)
+            setClicked(i)
         }
 
 
@@ -39,36 +45,38 @@ function Overview() {
                 <img src={Picture} alt=''></img>
             </div>
         </div>
+
         {/* SECTION TWO */}
-        <div className="qna-title"> 
-            <h1>Lacinia quis vel eros tempor orci.</h1>
-        </div>
-        <div className="qna-section">
-            {Data.map((item, index) => {
-                return (
-                    <div className="qna-container">
-                        <div className="qna-wrap" onClicked={() => toggle(index)} key={index}>
-                            <div className="qna-wrap-text">
-                                <p>{item.indexNumber}</p>
-                                <h2>{item.question}</h2>
+        <div className="qna">
+            <div className="qna-title"> 
+                 <h1>Lacinia quis vel eros tempor orci.</h1>
+            </div>
+            <div className="qna-section">
+                {Data.map((item, i) => {
+                    return (
+                        <div className="qna-container">
+                            <div className="qna-wrap" onClicked={() => toggle(i)} key={i}>
+                                <div className="qna-wrap-text">
+                                    <p>{item.index}</p>
+                                    <h2>{item.question}</h2>
+                                </div>
+
+                            <span>{clicked === i ? <img src={Minus} alt='minus'/> : <img src={Plus} alt='plus'/> }</span>
+
                             </div>
-
-                            <span>{clicked === index ? <img src={Minus} alt='minus'/> : <img src={Plus} alt='plus'/>}</span>
-
+                            <p>{item.answer}</p>
                         </div>
-                        
-                        <p>{item.answer}</p>
-                    </div>
-                 );
-             })}
-
+                    );
+                })}
+            </div>
         </div>
         {/* SECTION THREE */}
         <div className="quote-section">
             <div className="side-text"> 
-            Bibendum at varius vel pharetra vel turpis nunc eget lorem.
+            <h2> Bibendum at varius vel pharetra vel turpis nunc eget lorem. </h2>
             </div>
             <div className="quote">
+                <img src={quote1} alt='open quote' />
                 <p> Aliquam purus sit amet luctus venenatis lectus magna. 
                 Faucibus purus in massa tempor nec feugiat nisl pretium
                  fusce. Tortor vitae purus faucibus ornare. Neque 
@@ -76,7 +84,7 @@ function Overview() {
                   Tristique risus nec feugiat in fermentum. Elit duis 
                   tristique sollicitudin nibh sit amet commodo nulla. </p>
                 <p> Faucibus Vitae, Office Assistant </p>
-                <>logo</>
+                <img src={inVision} alt='inVision'/> <img src={quote2} alt='quote closed' />
             </div>
         </div>
 
@@ -84,25 +92,51 @@ function Overview() {
         <div className="blocks-section">
             <div className="blocks-header">
                 <h1>Massa tempor nec feugiat nisl pretium fusce</h1>
-                <p>Pellentesque habitant morbi tristique senectus et
-                    netus et malesuada. Ipsum faucibus vitae aliquet
+                <p>Pellentesque <span>habitant</span> morbi tristique senectus et
+                    netus et malesuada. <span>Ipsum faucibus vitae</span> aliquet
                     nec ullamcorper sit amet risus nullam. Dictum 
-                    varius duis at consectetur lorem donec massa sapien.
+                    varius duis at consectetur <span>lorem donec</span> massa sapien.
                     Massa tempornec feugiat nisl pretium fusce. </p>
                 <p>Elit scelerisque mauris pellentesque?   </p>
             </div>
             <div className="blocks-container">
                 <div className="one-block">
-                    <>icon</>
+                    <img src={blockone} />
+                </div>
+                <div className="one-block">
+                    <img src={blocktwo} />
+                </div>
+                <div className="one-block">
+                    <img src={androidGrey} />
+                </div>
+                <div className="one-block">
+                    <img src={blockfour} />
                 </div>
             </div>
-        </div>     
+        </div>   
+
+
         {/* SECTION FIVE */}
-        {/* <div className="subscribe-section">
-            <h1>Subscrbe to our newsletter</h1>
-            <input>Company email address</input> <button>Subscribe</button>
-            <p>Chupa chups gummi bears shortbread candy </p>
-        </div> */}
+    <div className='subscribe-container'>
+      <section className='subscription'>
+        <h2 className='subscription-heading'>
+        Subscribe to our newsletter
+        </h2>
+        <div className='input-areas'>
+          <form>
+            <input
+              className='footer-input'
+              name='email'
+              type='email'
+              placeholder='Company e-mail address' />
+            <button className='btn-primary btn-outline'>Subscribe</button>
+            <p className='subscription-text'>
+            Chupa chups gummi bears shortbread candy
+            </p>
+          </form>
+        </div>
+      </section>
+        </div>
     </div>
   )
 }
