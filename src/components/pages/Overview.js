@@ -5,8 +5,6 @@ import { Data }  from '../Data.js'
 import Plus from '../resources/Plus.png'
 import Minus from '../resources/Minus.png'
 import inVision from '../resources/inVision.png'
-import quote1 from '../resources/quote1.png'
-import quote2 from '../resources/quote2.png'
 import blockone from '../resources/blockone.png'
 import blocktwo from '../resources/blocktwo.png'
 import androidGrey from '../resources/androidGrey.png'
@@ -64,7 +62,7 @@ function Overview() {
                             <span>{clicked === i ? <img src={Minus} alt='minus'/> : <img src={Plus} alt='plus'/> }</span>
 
                             </div>
-                            <p>{item.answer}</p>
+                            <div className={clicked === i ? 'qna-answer show' : 'qna-answer'}><p>{item.answer}</p></div>
                         </div>
                     );
                 })}
@@ -76,7 +74,6 @@ function Overview() {
             <h2> Bibendum at varius vel pharetra vel turpis nunc eget lorem. </h2>
             </div>
             <div className="quote">
-                <img src={quote1} alt='open quote' />
                 <p> Aliquam purus sit amet luctus venenatis lectus magna. 
                 Faucibus purus in massa tempor nec feugiat nisl pretium
                  fusce. Tortor vitae purus faucibus ornare. Neque 
@@ -84,7 +81,7 @@ function Overview() {
                   Tristique risus nec feugiat in fermentum. Elit duis 
                   tristique sollicitudin nibh sit amet commodo nulla. </p>
                 <p> Faucibus Vitae, Office Assistant </p>
-                <img src={inVision} alt='inVision'/> <img src={quote2} alt='quote closed' />
+                <img src={inVision} alt='inVision'/>
             </div>
         </div>
 
