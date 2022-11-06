@@ -9,6 +9,10 @@ import blockone from '../resources/blockone.png'
 import blocktwo from '../resources/blocktwo.png'
 import androidGrey from '../resources/androidGrey.png'
 import blockfour from '../resources/blockfour.png'
+import circleWhite from '../resources/circleWhite.png'
+import scissorsWhite from '../resources/scissorsWhite.png'
+import androidWhite from '../resources/androidWhite.png'
+import plusnminusWhite from '../resources/plusnminusWhite.png'
 
 
 function Overview() {
@@ -53,7 +57,7 @@ function Overview() {
                 {Data.map((item, i) => {
                     return (
                         <div className="qna-container">
-                            <div className="qna-wrap" onClicked={() => toggle(i)} key={i}>
+                            <div className="qna-wrap" onClick={() => toggle(i)} key={i}>
                                 <div className="qna-wrap-text">
                                     <p>{item.index}</p>
                                     <h2>{item.question}</h2>
@@ -87,27 +91,29 @@ function Overview() {
 
         {/* SECTION FOUR */}
         <div className="blocks-section">
-            <div className="blocks-header">
-                <h1>Massa tempor nec feugiat nisl pretium fusce</h1>
-                <p>Pellentesque <span>habitant</span> morbi tristique senectus et
-                    netus et malesuada. <span>Ipsum faucibus vitae</span> aliquet
-                    nec ullamcorper sit amet risus nullam. Dictum 
-                    varius duis at consectetur <span>lorem donec</span> massa sapien.
-                    Massa tempornec feugiat nisl pretium fusce. </p>
-                <p>Elit scelerisque mauris pellentesque?   </p>
+            <div className="blocks-container">
+                <div className="blocks-header">
+                    <h1>Massa tempor nec feugiat nisl pretium fusce</h1>
+                    <p>Pellentesque <span>habitant</span> morbi tristique senectus et
+                        netus et malesuada. <span>Ipsum faucibus vitae</span> aliquet
+                        nec ullamcorper sit amet risus nullam. Dictum 
+                        varius duis at consectetur <span>lorem donec</span> massa sapien.
+                        Massa tempornec feugiat nisl pretium fusce. </p>
+                    <p>Elit scelerisque mauris pellentesque?   </p>
+                </div>
             </div>
             <div className="blocks-container">
                 <div className="one-block">
-                    <img src={blockone} />
+                    <img src={blockone} onMouseOver={e => e.currentTarget.src = circleWhite} onMouseOut={e => e.currentTarget.src = blockone}  />
                 </div>
                 <div className="one-block">
-                    <img src={blocktwo} />
+                    <img src={blocktwo} onMouseOver={e => e.currentTarget.src = scissorsWhite} onMouseOut={e => e.currentTarget.src = blocktwo}  />
                 </div>
                 <div className="one-block">
-                    <img src={androidGrey} />
+                    <img src={androidGrey} onMouseOver={e => e.currentTarget.src = androidWhite} onMouseOut={e => e.currentTarget.src = androidGrey}  />
                 </div>
                 <div className="one-block">
-                    <img src={blockfour} />
+                    <img src={blockfour} onMouseOver={e => e.currentTarget.src = plusnminusWhite} onMouseOut={e => e.currentTarget.src = blockfour}  />
                 </div>
             </div>
         </div>   

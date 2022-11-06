@@ -6,7 +6,7 @@
     margin: 30px 0px;
 }
 
-/* SECTION ONE */
+/* INTRODUCTION SECTION */
 
 .introduction {
     display: flex;
@@ -43,7 +43,7 @@
 }
 
 
-/* SECTION 2 */
+/* QNA SECTION */
 
 .qna-section {
     display: flex;
@@ -69,13 +69,13 @@
     padding-top: 30px;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
+    transition: all 0.5s ease-in;
 }
 
 .qna-answer.show {
     height: auto;
     max-height: 9999px;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
+    transition: all 0.5s ease-out;
 }
 
 .qna-wrap {
@@ -96,7 +96,7 @@
 }
 
 
-/* SECTION THREE */
+/* QUOTE SECTION */
 
 .quote-section {
     display: flex;
@@ -154,20 +154,20 @@
     height: 29px;
 }
 
-/* SECTION FOUR */
+/* BLOCKS SECTION */
 
 .blocks-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80vw;
+    width: 100vw;
 }
 
 .blocks-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 800px;
+    width: 1000px;
     padding-top: 50px;
     gap: 10px;
 }
@@ -203,12 +203,23 @@
 
 .one-block::after {
     content: '>';
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;
+    top: 30%;
+    left: 30%;
     transform: translate(50%, 50%);
     color: var(--primary-color);
     font-weight: 700;
+}
+
+.one-block:hover::after {
+    position: absolute;
+    content: 'View details >';
+    color: var(--white);
+    font-weight: 400;
+    top: 75%;
+    left: 25%;
+    text-decoration: underline;
+
 }
 
 .one-block:hover {
@@ -216,7 +227,7 @@
     box-shadow: none;
 }
 
-/* SECTION FIVE */
+/* SUBSCRIBE SECTION */
 
 .subscribe-container {
     background-color: var(--primary-color);
